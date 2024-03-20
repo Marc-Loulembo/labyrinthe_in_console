@@ -1,0 +1,54 @@
+Marco L
+
+J'importe les bibliothèques nécessaires :
+
+J'importe le module random pour générer des nombres aléatoires.
+J'importe également PriorityQueue depuis le module queue.
+
+1 - J'initialise le labyrinthe :
+Je définis une fonction create_maze(size=5, num_walls=5) pour créer un labyrinthe.
+  
+2 - Je vérifie si la taille fournie est valide (une taille minimale de 4) et que le nombre de murs est dans les limites.
+    
+3 - J'initialise une grille (maze) avec des points ('.') représentant les espaces vides.
+4 - Je place l'entrée ('E') dans le coin supérieur gauche et la sortie ('O') dans le coin supérieur droit.
+    Ensuite, je place aléatoirement des murs ('W') dans le labyrinthe en évitant de bloquer l'entrée et la sortie.
+
+5 - Je remplis le labyrinthe :
+
+6 - La fonction fill_maze(maze) est responsable du remplissage du labyrinthe avec des numéros pour représenter les étapes depuis l'entrée.
+
+7 - Je calcule le nombre maximum d'étapes en fonction de la taille du labyrinthe.
+
+8 - Je parcours le labyrinthe en marquant les cellules autour de l'entrée avec des numéros.
+
+9 - Ensuite, je continue à marquer les cellules autour du numéro actuel, en incrémentant l'étape.
+    J'affiche le labyrinthe :
+
+10 - La fonction display_labyrinthe(maze) est utilisée pour afficher le labyrinthe dans la console. Je parcours les lignes et les colonnes, imprimant chaque cellule avec des espaces entre elles.
+Je résous le labyrinthe :
+
+11 - La fonction solve_maze(maze) utilise l'algorithme A* pour trouver la solution du labyrinthe.
+
+12 - Je définis les directions de déplacement (haut, bas, gauche et droite).
+
+13 - J'initialise les points de départ et d'arrivée.
+
+14 - Je calcule une valeur heuristique pour chaque cellule en fonction de sa distance par rapport à la sortie.
+    
+15 - J'utilise une file de priorité (PriorityQueue) pour explorer les cellules dans l'ordre de leur priorité.
+
+16 - J'explore le labyrinthe et trouve le chemin le plus court de l'entrée à la sortie.
+
+17 - Une fois le chemin trouvé, je le reconstruis et le marque avec des astérisques ('*') dans le labyrinthe.
+     Dans l'exécution principale :
+
+18 - Je crée un labyrinthe à l'aide de la fonction create_maze avec une taille de 5x5 et 5 murs placés aléatoirement.
+19 - J'affiche le labyrinthe généré.
+
+20 - Je remplis le labyrinthe avec des numéros d'étapes à l'aide de la fonction fill_maze.
+     J'affiche le labyrinthe rempli.
+
+21 - Je résous le labyrinthe en utilisant la fonction solve_maze, marquant le chemin de solution.
+     
+22 - Enfin, j'affiche le labyrinthe résolu avec le chemin de solution marqué.
